@@ -21,5 +21,11 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Allow Foodie to always access your location to find places to eat around you.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow Foodie to access your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow Foodie to access your location when in use</string>
 </dict>
 </plist>

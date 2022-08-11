@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Restaurant" representedClassName="Restaurant" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="website" optional="YES" attributeType="String"/>
+        <relationship name="storedLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StoredLocation" inverseName="restaurants" inverseEntity="StoredLocation"/>
+    </entity>
+    <entity name="StoredLocation" representedClassName="StoredLocation" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="restaurants" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Restaurant" inverseName="storedLocation" inverseEntity="Restaurant"/>
+    </entity>
+    <elements>
+        <element name="Restaurant" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="StoredLocation" positionX="-54" positionY="18" width="128" height="59"/>
+    </elements>
 </model>

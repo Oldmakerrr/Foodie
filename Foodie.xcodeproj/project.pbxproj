@@ -16,6 +16,15 @@
 		18C290CD28A40E43009D9C23 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C290CC28A40E43009D9C23 /* RestaurantTableViewCell.swift */; };
 		18C290D028A40EDF009D9C23 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C290CF28A40EDF009D9C23 /* RestaurantViewController.swift */; };
 		18C290D228A40F07009D9C23 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C290D128A40F07009D9C23 /* MainViewController.swift */; };
+		18C290D528A41B9C009D9C23 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C290D428A41B9C009D9C23 /* CoreDataStack.swift */; };
+		18C290D828A41C8F009D9C23 /* FoodieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C290D728A41C8F009D9C23 /* FoodieService.swift */; };
+		18C290DA28A41D65009D9C23 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C290D928A41D65009D9C23 /* LocationService.swift */; };
+		18C290DC28A41FFF009D9C23 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C290DB28A41FFF009D9C23 /* Place.swift */; };
+		18C290DE28A42292009D9C23 /* RESTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C290DD28A42292009D9C23 /* RESTService.swift */; };
+		18C290E328A423D4009D9C23 /* Restaurant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C290DF28A423D4009D9C23 /* Restaurant+CoreDataClass.swift */; };
+		18C290E428A423D4009D9C23 /* Restaurant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C290E028A423D4009D9C23 /* Restaurant+CoreDataProperties.swift */; };
+		18C290E528A423D4009D9C23 /* StoredLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C290E128A423D4009D9C23 /* StoredLocation+CoreDataClass.swift */; };
+		18C290E628A423D4009D9C23 /* StoredLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C290E228A423D4009D9C23 /* StoredLocation+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +39,15 @@
 		18C290CC28A40E43009D9C23 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		18C290CF28A40EDF009D9C23 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		18C290D128A40F07009D9C23 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		18C290D428A41B9C009D9C23 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		18C290D728A41C8F009D9C23 /* FoodieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodieService.swift; sourceTree = "<group>"; };
+		18C290D928A41D65009D9C23 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		18C290DB28A41FFF009D9C23 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		18C290DD28A42292009D9C23 /* RESTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTService.swift; sourceTree = "<group>"; };
+		18C290DF28A423D4009D9C23 /* Restaurant+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Restaurant+CoreDataClass.swift"; sourceTree = "<group>"; };
+		18C290E028A423D4009D9C23 /* Restaurant+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Restaurant+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		18C290E128A423D4009D9C23 /* StoredLocation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoredLocation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		18C290E228A423D4009D9C23 /* StoredLocation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoredLocation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +82,7 @@
 			children = (
 				18C290B428A3FF99009D9C23 /* AppDelegate.swift */,
 				18C290B628A3FF99009D9C23 /* SceneDelegate.swift */,
+				18C290D628A41C81009D9C23 /* Service */,
 				18C290D328A40F2D009D9C23 /* Model */,
 				18C290CE28A40ECB009D9C23 /* Controller */,
 				18C290CB28A40E33009D9C23 /* View */,
@@ -96,8 +115,24 @@
 			isa = PBXGroup;
 			children = (
 				18C290BD28A3FF99009D9C23 /* Foodie.xcdatamodeld */,
+				18C290D428A41B9C009D9C23 /* CoreDataStack.swift */,
+				18C290DB28A41FFF009D9C23 /* Place.swift */,
+				18C290DF28A423D4009D9C23 /* Restaurant+CoreDataClass.swift */,
+				18C290E028A423D4009D9C23 /* Restaurant+CoreDataProperties.swift */,
+				18C290E128A423D4009D9C23 /* StoredLocation+CoreDataClass.swift */,
+				18C290E228A423D4009D9C23 /* StoredLocation+CoreDataProperties.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		18C290D628A41C81009D9C23 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				18C290DD28A42292009D9C23 /* RESTService.swift */,
+				18C290D728A41C8F009D9C23 /* FoodieService.swift */,
+				18C290D928A41D65009D9C23 /* LocationService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,12 +206,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C290D528A41B9C009D9C23 /* CoreDataStack.swift in Sources */,
 				18C290CD28A40E43009D9C23 /* RestaurantTableViewCell.swift in Sources */,
+				18C290E328A423D4009D9C23 /* Restaurant+CoreDataClass.swift in Sources */,
 				18C290D028A40EDF009D9C23 /* RestaurantViewController.swift in Sources */,
 				18C290BF28A3FF99009D9C23 /* Foodie.xcdatamodeld in Sources */,
+				18C290E528A423D4009D9C23 /* StoredLocation+CoreDataClass.swift in Sources */,
 				18C290D228A40F07009D9C23 /* MainViewController.swift in Sources */,
+				18C290E628A423D4009D9C23 /* StoredLocation+CoreDataProperties.swift in Sources */,
+				18C290D828A41C8F009D9C23 /* FoodieService.swift in Sources */,
 				18C290B528A3FF99009D9C23 /* AppDelegate.swift in Sources */,
+				18C290DA28A41D65009D9C23 /* LocationService.swift in Sources */,
+				18C290E428A423D4009D9C23 /* Restaurant+CoreDataProperties.swift in Sources */,
+				18C290DE28A42292009D9C23 /* RESTService.swift in Sources */,
 				18C290B728A3FF99009D9C23 /* SceneDelegate.swift in Sources */,
+				18C290DC28A41FFF009D9C23 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
