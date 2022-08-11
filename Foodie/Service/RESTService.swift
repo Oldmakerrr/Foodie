@@ -22,7 +22,10 @@ enum RESTServiceOperation: String {
 class RESTService {
     typealias RESTCompletionHandler = (_ data: Any?, Error?) -> Void
     
-    class func execute(endPoint urlString: String, forType type: RESTServiceOperation, withParams params: [String: Any]?, completionHandler: @escaping RESTCompletionHandler) {
+    class func execute(endPoint urlString: String,
+                       forType type: RESTServiceOperation,
+                       withParams params: [String: Any]?,
+                       completionHandler: @escaping RESTCompletionHandler) {
         var queryString = "?"
         var endPoint = urlString
         

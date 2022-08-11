@@ -88,6 +88,37 @@ class FoodieService {
     }
     
     func saveCurrentList(withName name: String?) {
+        guard
+            let managedObjectContext = managedObjectContext,
+            let name = name, !name.isEmpty,
+            !places.isEmpty
+        else { return }
         
+//        let privateContext = CoreDataStack().persistentContainer.newBackgroundContext()
+        managedObjectContext.perform { [weak self] in
+            guard let places = self?.places else { return }
+            var restaurants = [Restaurant]()
+            
+            do {
+                for place in places {
+                    let restaurant = Restaurant(context: managedObjectContext)
+                    let placeInfo = place.placeInfo
+                    restaurant.name = placeInfo.name
+                    restaurant.address = placeInfo.location.address
+                    restaurant.website = placeInfo.website
+                    
+                    if let url = URL(string: placeInfo.imageURL), let imageData = try? Data(contentsOf: url) {
+                        restaurant.image = imageData
+                    }
+                    restaurants.append(restaurant)
+                }
+                let storedLocation = StoredLocation(context: managedObjectContext)
+                storedLocation.name = name
+                storedLocation.addToRestaurants(NSSet(array: restaurants))
+                try managedObjectContext.save()
+            } catch let error {
+                print("Save failed with error: \(error.localizedDescription)")
+            }
+        }
     }
 }
